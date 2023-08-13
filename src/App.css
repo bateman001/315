@@ -1,38 +1,356 @@
-.App {
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+}
+
+@font-face {
+  font-family: "headerFont";
+  src: url("./fonts/Harmattan-woff/AnyConv.com__Harmattan-Bold.woff")
+    format("woff");
+}
+
+@font-face {
+  font-family: "paragraphFont";
+  src: url("./fonts/Harmattan-woff/AnyConv.com__Harmattan-Regular.woff")
+    format("woff");
+}
+h1 {
+  font-size: 60px;
+}
+
+h3 {
+  font-size: 35px;
+  /* font-family: "Lato"; */
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "headerFont";
+}
+
+p,
+li,
+a,
+button {
+  font-family: "paragraphFont";
+}
+
+h1,
+h2,
+h3,
+li,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+p,
+button,
+li {
+  line-height: 1.5;
+  font-size: 25px;
+}
+
+.header {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+  /* border-bottom: 0.5px solid rgba(128, 128, 128, 0.428); */
+  position: fixed;
+  width: 100%;
+}
+
+.logo {
+  width: 40%;
+}
+
+.logo-small {
+  width: 10%;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.homepage-intro-parent {
+  height: 90vh;
+  background-image: url(./imgs/gage-studio2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homepage-intro-child {
+  /* padding: 5% 2%; */
+  height: 60%;
+  color: white;
+  width: 40%;
+  /* border: 1px solid white; */
+}
+
+.homepage-intro-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.white-button {
+  padding: 15px 20px;
+  color: black;
+  font-size: 20px;
+  background-color: white;
+  border: 1px solid black;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.327);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.white-button:hover {
+  transition: 0.4s;
+  color: white;
+  background-color: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.homepage-article-parent {
+  padding: 5%;
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.homepage-article-photo {
+  width: 100%;
+  flex: 1;
+}
+
+.homepage-article-photo img {
+  width: 95%;
+  border-radius: 15px;
+  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.327);
+}
+
+.homepage-article-child {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homepage-card-parent {
+  height: 100vh;
+  background-color: #a561f3;
+  display: flex;
+  align-items: center;
+  background-image: url(./imgs/background3.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-direction: column;
+  justify-content: center;
+  /* background-blend-mode: color-burn; */
+}
+
+.homepage-card-button {
+  flex: 0.25;
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homepage-card-child {
+  width: 100%;
+  display: flex;
+  flex: 0.5;
+  justify-content: space-evenly;
+}
+
+.homepage-card {
+  border: 1px solid white;
+  background-color: white;
+  width: 20%;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.42);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+}
+
+.contact {
+  padding: 50px;
+  height: 70vh;
+  /* border: 1px solid red; */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-form {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 2%;
+  padding-top: 2%;
+  border: 1px solid #a561f3e1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px 0px #a561f3e1;
+  background-color: white;
+}
+
+.text-field {
+  width: 100%;
+  /* background-color: #ffffff; */
+}
+
+.purple-button {
+  padding: 15px 20px;
   color: white;
+  font-size: 20px;
+  background-color: #a561f3e1;
+  border: 1px solid #a561f3e1;
+  width: auto;
+  text-align: center;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.purple-button:hover {
+  transition: 0.4s;
+  background-color: #a561f3;
+  /* color: #whi; */
+  box-shadow: 0px 0px 3px 1px rgba(10, 7, 12, 0.32);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.blue-button {
+  padding: 15px 20px;
+  color: white;
+  font-size: 20px;
+  background-color: #4b90ff;
+  border: 2px solid #4b90ff;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.327);
+}
+
+.blue-button:hover {
+  transition: 0.4s;
+  background-color: white;
+  color: #4b90ff;
+  box-shadow: none;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.expand-text:hover {
+  transition: 0.4s;
+  color: rgba(255, 255, 255, 0.813);
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.team-intro {
+  text-align: center;
+  /* border: 1px solid black; */
+  display: flex;
+  height: 90vh;
+  /* margin: "50px 0 "; */
+}
+
+.team-intro img {
+  flex: 1;
+  width: 20%;
+  padding: 40px;
+}
+
+.team-info {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  /* border: 1px solid blue; */
+  margin: 2%;
+  flex: 0.8;
+  /* flex-direction: column; */
+}
+
+.team-info-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  flex: 1;
+  /* box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.327); */
+}
+
+.team-info-Gage {
+  background-image: url(./imgs/gage.JPG);
+  background-position: top 45% right 50%;
+}
+
+.team-info-Brent {
+  background-image: url(./imgs/brent3.JPG);
+  background-position: top 40% right 50%;
+}
+
+.team-info-Chris {
+  background-image: url(./imgs/gages-brother.jpg);
+  background-position: top 20% right 50%;
+}
+
+.selected {
+  transition: 0.4s;
+  background-color: #a561f396;
+  color: white;
+  /* text-shadow: #a561f3 1px 0 10px; */
+  /* border: 5px solid black; */
+}
+
+.social-icon:hover {
+  color: #a561f3;
+}
+
+.not-selected {
+  background-color: rgba(128, 128, 128, 0.687);
+  background-blend-mode: overlay;
+}
+
+.member-name {
+  cursor: pointer;
+  width: 75%;
+  padding: 10px;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.member-name:hover {
+  transition: 0.4s;
+  background-color: #a561f396;
+  color: white;
+  border: 1px solid #a561f358;
 }
